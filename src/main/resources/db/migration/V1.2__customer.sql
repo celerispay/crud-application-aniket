@@ -1,0 +1,1 @@
+ALTER TABLE customers MODIFY customerId int NOT NULL AUTO_INCREMENT

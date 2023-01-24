@@ -1,5 +1,6 @@
 package com.example.payApp.controller;
 
+<<<<<<< HEAD
 import javax.validation.Valid;
 
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
@@ -27,6 +28,20 @@ import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Controller
+=======
+import com.example.payApp.models.Customer;
+import com.example.payApp.services.ICustomerService;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+
+@Log4j2
+@RestController
+>>>>>>> 776206b (initial2 commit)
 public class AppController {
 	
 	@Autowired
