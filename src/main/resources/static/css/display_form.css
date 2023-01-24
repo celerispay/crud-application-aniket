@@ -1,0 +1,14 @@
+@charset "UTF-8";
+h2 {
+	text-align: center;
+}
+
+table {
+	border: 0px solid #000000;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ tbody>:nth-child(8) {
+	text-align: center;
+} 
