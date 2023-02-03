@@ -15,7 +15,6 @@ import com.example.payApp.models.Customer;
 import com.example.payApp.services.CustomerService;
 
 @Controller
-@RequestMapping("/public")
 public class ThymeleafController {
 	@Autowired
 	private CustomerService customerService;
