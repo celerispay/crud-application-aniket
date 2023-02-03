@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.example.payApp.exception.CustomerNotFoundException;
@@ -12,7 +11,7 @@ import com.example.payApp.models.Customer;
 import com.example.payApp.repositories.CustomerRepository;
 
 @Service
-public class CustomerRepoServiceImpl implements ICustomerRepoService {
+public class CustomerRepoServiceImpl implements CustomerRepoService {
 	
 	@Autowired
 	private CustomerRepository customerRepository;
@@ -40,7 +39,7 @@ public class CustomerRepoServiceImpl implements ICustomerRepoService {
 	
 	@Override
 	public Customer updateById(Customer customer, Long id)throws CustomerNotFoundException{
-		// TODO Auto-generated method stub
+		
 		Optional<Customer> optionalCusOptional = customerRepository.findById(id);
 		if(!optionalCusOptional.isPresent()) {
 			throw new CustomerNotFoundException("Please enter correct customerId, This Id "+ id + " is not present");
@@ -57,7 +56,7 @@ public class CustomerRepoServiceImpl implements ICustomerRepoService {
 
 	@Override
 	public void deleteById(Long id)throws CustomerNotFoundException {
-		// TODO Auto-generated method stub
+		
 		customerRepository.deleteById(id);
 		
 	}

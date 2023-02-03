@@ -3,6 +3,7 @@ plugins {
 	id 'org.springframework.boot' version '2.7.7'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 	id 'eclipse'
+	id "org.sonarqube" version "3.5.0.2730"
 }
 
 group = 'com.example'
@@ -13,6 +14,9 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+}
+configurations { 
+   all*.exclude group:'org.springframework.boot', module:'spring-boot-starter-logging' 
 }
 
 repositories {
@@ -26,12 +30,14 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.7.3'
 	implementation 'mysql:mysql-connector-java:8.0.28'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.batch:spring-batch-core:4.3.3'
 	implementation 'javax.inject:javax.inject:1'
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
 	implementation 'com.fasterxml.jackson.core:jackson-core:2.13.3'
 	implementation 'javax.validation:validation-api:2.0.0.Final'
 	implementation 'org.flywaydb:flyway-core:8.5.13'
 	implementation 'org.flywaydb:flyway-mysql:8.4.4'
+	implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

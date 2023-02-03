@@ -1,13 +1,10 @@
 package com.example.payApp.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import org.springframework.stereotype.Repository;
 
-import com.example.payApp.models.Customer;
-import com.example.payApp.models.User;
-
+import com.example.payApp.models.Bank;
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
-	
+public interface BankRepository extends JpaRepository<Bank, Integer> {
+
 }

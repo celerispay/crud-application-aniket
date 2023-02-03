@@ -35,7 +35,7 @@ import org.springframework.http.MediaType;
 import com.example.payApp.PayAppApplication;
 import com.example.payApp.models.Customer;
 import com.example.payApp.services.CustomerServiceImpl;
-import com.example.payApp.services.ICustomerService;
+import com.example.payApp.services.CustomerService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
@@ -49,7 +49,7 @@ class AppControllerTest {
 	
 	private MockMvc mvc;
 	@MockBean
-	private ICustomerService customerService;
+	private CustomerService customerService;
 	
 	@InjectMocks
 	private AppController appController;

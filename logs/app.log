@@ -1,0 +1,64 @@
+2023-02-02 15:30:21,533 INFO o.s.b.StartupInfoLogger [main] Starting PayAppApplication using Java 11.0.2 on DESKTOP-4JROMD0 with PID 9880 (C:\Users\Aniket Kumar\eclipse-workspace\payApp\bin\main started by Aniket Kumar in C:\Users\Aniket Kumar\eclipse-workspace\payApp)
+2023-02-02 15:30:21,577 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-02 15:30:21,579 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-02 15:30:28,545 INFO o.s.b.StartupInfoLogger [main] Started PayAppApplication in 7.496 seconds (JVM running for 8.488)
+2023-02-02 15:30:28,553 INFO c.e.p.PayAppApplication [main] Welcome To the Pay App enjoy your secure payment App
+2023-02-02 15:30:28,554 INFO c.e.p.PayAppApplication [main] Use this link to fetch the swagger Documentation
+2023-02-02 15:30:28,554 INFO c.e.p.PayAppApplication [main] http://localhost:8080/swagger-ui.html
+2023-02-02 15:31:41,733 INFO o.s.b.StartupInfoLogger [main] Starting PayAppApplication using Java 11.0.2 on DESKTOP-4JROMD0 with PID 9296 (C:\Users\Aniket Kumar\eclipse-workspace\payApp\bin\main started by Aniket Kumar in C:\Users\Aniket Kumar\eclipse-workspace\payApp)
+2023-02-02 15:31:41,752 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-02 15:31:41,754 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-02 15:31:48,197 INFO o.s.b.StartupInfoLogger [main] Started PayAppApplication in 6.886 seconds (JVM running for 7.876)
+2023-02-02 15:31:48,206 INFO c.e.p.PayAppApplication [main] Welcome To the Pay App enjoy your secure payment App
+2023-02-02 15:31:48,207 INFO c.e.p.PayAppApplication [main] Use this link to fetch the swagger Documentation
+2023-02-02 15:31:48,207 INFO c.e.p.PayAppApplication [main] http://localhost:8080/swagger-ui.html
+2023-02-02 15:32:11,469 INFO c.e.p.c.AppController [http-nio-8080-exec-1] finding doctor with id 2
+2023-02-02 15:32:11,609 INFO c.e.p.c.AppController [http-nio-8080-exec-1] Detail of customer
+2023-02-02 15:34:16,921 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-7] Successfully Authenticated the user
+2023-02-02 15:34:16,921 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-7] Role: ROLE_READ
+2023-02-02 15:34:16,921 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-7] Role:  ROLE_WRITE
+2023-02-02 15:58:02,868 INFO o.s.b.StartupInfoLogger [main] Starting PayAppApplication using Java 11.0.2 on DESKTOP-4JROMD0 with PID 944 (C:\Users\Aniket Kumar\eclipse-workspace\payApp\bin\main started by Aniket Kumar in C:\Users\Aniket Kumar\eclipse-workspace\payApp)
+2023-02-02 15:58:02,897 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-02 15:58:02,899 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-02 15:58:11,775 INFO o.s.b.StartupInfoLogger [main] Started PayAppApplication in 9.326 seconds (JVM running for 10.309)
+2023-02-02 15:58:11,782 INFO c.e.p.PayAppApplication [main] Welcome To the Pay App enjoy your secure payment App
+2023-02-02 15:58:11,783 INFO c.e.p.PayAppApplication [main] Use this link to fetch the swagger Documentation
+2023-02-02 15:58:11,783 INFO c.e.p.PayAppApplication [main] http://localhost:8080/swagger-ui.html
+2023-02-02 16:02:33,668 INFO o.s.b.StartupInfoLogger [main] Starting PayAppApplication using Java 11.0.2 on DESKTOP-4JROMD0 with PID 11080 (C:\Users\Aniket Kumar\eclipse-workspace\payApp\bin\main started by Aniket Kumar in C:\Users\Aniket Kumar\eclipse-workspace\payApp)
+2023-02-02 16:02:33,678 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-02 16:02:33,681 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-02 16:02:40,633 INFO o.s.b.StartupInfoLogger [main] Started PayAppApplication in 7.367 seconds (JVM running for 8.302)
+2023-02-02 16:02:40,641 INFO c.e.p.PayAppApplication [main] Welcome To the Pay App enjoy your secure payment App
+2023-02-02 16:02:40,641 INFO c.e.p.PayAppApplication [main] Use this link to fetch the swagger Documentation
+2023-02-02 16:02:40,641 INFO c.e.p.PayAppApplication [main] http://localhost:8080/swagger-ui.html
+2023-02-02 16:03:37,237 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-4] Successfully Authenticated the user
+2023-02-02 16:03:37,237 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-4] Role: ROLE_READ
+2023-02-02 16:03:37,238 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-4] Role:  ROLE_WRITE
+2023-02-02 16:04:16,465 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-3] Successfully Authenticated the user
+2023-02-02 16:04:16,466 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-3] Role: ROLE_READ
+2023-02-02 16:04:16,466 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-3] Role:  ROLE_WRITE
+2023-02-02 16:04:18,484 INFO c.e.p.c.AppController [http-nio-8080-exec-6] finding doctor with id 2
+2023-02-02 16:04:52,957 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-1] Successfully Authenticated the user
+2023-02-02 16:04:52,957 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-1] Role: ROLE_READ
+2023-02-02 16:04:52,957 INFO c.e.p.c.UserAuthenticationProvider [http-nio-8080-exec-1] Role:  ROLE_WRITE
+2023-02-02 18:10:51,907 INFO o.s.b.StartupInfoLogger [main] Starting PayAppApplication using Java 11.0.2 on DESKTOP-4JROMD0 with PID 5872 (C:\Users\Aniket Kumar\eclipse-workspace\payApp\bin\main started by Aniket Kumar in C:\Users\Aniket Kumar\eclipse-workspace\payApp)
+2023-02-02 18:10:51,919 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-02 18:10:51,920 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-02 18:10:59,150 INFO o.s.b.StartupInfoLogger [main] Started PayAppApplication in 7.94 seconds (JVM running for 8.896)
+2023-02-02 18:10:59,162 INFO c.e.p.PayAppApplication [main] Welcome To the Pay App enjoy your secure payment App
+2023-02-02 18:10:59,164 INFO c.e.p.PayAppApplication [main] Use this link to fetch the swagger Documentation
+2023-02-02 18:10:59,165 INFO c.e.p.PayAppApplication [main] http://localhost:8080/swagger-ui.html
+2023-02-02 18:19:02,636 INFO o.s.b.StartupInfoLogger [main] Starting PayAppApplication using Java 11.0.2 on DESKTOP-4JROMD0 with PID 3792 (C:\Users\Aniket Kumar\eclipse-workspace\payApp\bin\main started by Aniket Kumar in C:\Users\Aniket Kumar\eclipse-workspace\payApp)
+2023-02-02 18:19:02,636 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-02 18:19:02,652 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-02 18:19:10,338 INFO o.s.b.StartupInfoLogger [main] Started PayAppApplication in 8.13 seconds (JVM running for 9.271)
+2023-02-02 18:19:10,346 INFO c.e.p.PayAppApplication [main] Welcome To the Pay App enjoy your secure payment App
+2023-02-02 18:19:10,346 INFO c.e.p.PayAppApplication [main] Use this link to fetch the swagger Documentation
+2023-02-02 18:19:10,347 INFO c.e.p.PayAppApplication [main] http://localhost:8080/swagger-ui.html
+2023-02-02 19:10:13,354 INFO o.s.b.StartupInfoLogger [main] Starting PayAppApplication using Java 11.0.2 on DESKTOP-4JROMD0 with PID 12676 (C:\Users\Aniket Kumar\eclipse-workspace\payApp\bin\main started by Aniket Kumar in C:\Users\Aniket Kumar\eclipse-workspace\payApp)
+2023-02-02 19:10:13,368 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.7, Spring v5.3.24
+2023-02-02 19:10:13,370 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-02 19:10:20,062 INFO o.s.b.StartupInfoLogger [main] Started PayAppApplication in 7.203 seconds (JVM running for 8.169)
+2023-02-02 19:10:20,070 INFO c.e.p.PayAppApplication [main] Welcome To the Pay App enjoy your secure payment App
+2023-02-02 19:10:20,070 INFO c.e.p.PayAppApplication [main] Use this link to fetch the swagger Documentation
+2023-02-02 19:10:20,071 INFO c.e.p.PayAppApplication [main] http://localhost:8080/swagger-ui.html

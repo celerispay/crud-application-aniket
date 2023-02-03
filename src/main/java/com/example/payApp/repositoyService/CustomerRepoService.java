@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.example.payApp.models.Customer;
 
-public interface ICustomerRepoService {
+public interface CustomerRepoService {
 	public Customer save(Customer customer);
 	public List<Customer> findAll();
 	public Customer findById(Long id);

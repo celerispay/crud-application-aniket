@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.payApp.models.Customer;
-import com.example.payApp.services.ICustomerService;
+import com.example.payApp.services.CustomerService;
 
 @Controller
 public class ThymeleafController {
 	@Autowired
-	private ICustomerService customerService;
+	private CustomerService customerService;
 	
 	@GetMapping("/")
 	public String index(Model model) {
