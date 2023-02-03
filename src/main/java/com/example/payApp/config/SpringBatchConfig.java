@@ -17,6 +17,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
+import org.springframework.scheduling.TaskScheduler;
+import org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor;
 
 import com.example.payApp.models.Bank;
 import com.example.payApp.repositories.BankRepository;
@@ -33,6 +35,12 @@ public class SpringBatchConfig {
 	
 	@Autowired
 	private BankRepository bankRepository;
+	
+	@Autowired
+	private ScheduledAnnotationBeanPostProcessor postProcessor;
+	
+	@Autowired
+	private ScheduledJobBean scheduledJobBean;
 	
 	@Bean
 	public FlatFileItemReader<Bank> reader(){
@@ -97,6 +105,14 @@ public class SpringBatchConfig {
 		asyncTaskExecutor.setConcurrencyLimit(10);
 		return asyncTaskExecutor;
 	}
+	
+	public void stopSchedule(){
+	    postProcessor.postProcessBeforeDestruction(scheduledJobBean, "scheduledJobBean");
+	    System.out.println("enend");
+	}
+	
+	
+	
 	
 	
 }
