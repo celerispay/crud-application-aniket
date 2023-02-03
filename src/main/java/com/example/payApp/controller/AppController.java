@@ -1,6 +1,5 @@
 package com.example.payApp.controller;
 
-<<<<<<< HEAD
 import javax.validation.Valid;
 
 import org.apache.logging.log4j.LogManager;
@@ -22,29 +21,10 @@ import com.example.payApp.services.CardService;
 import com.example.payApp.services.CustomerService;
 import com.example.payApp.services.UpiService;
 
-
-<<<<<<< HEAD
-
-
-@RestController
-=======
-@Log4j2
-@Controller
-=======
-import com.example.payApp.models.Customer;
-import com.example.payApp.services.ICustomerService;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 
 @Log4j2
 @RestController
->>>>>>> 776206b (initial2 commit)
->>>>>>> 49ca26d6527aa3ed344797aa826d56467dc6bf7e
 public class AppController {
 	private static Logger log = LogManager.getLogger(AppController.class);	
 	@Autowired
