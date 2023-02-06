@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ScheduledJobBean {
+public class PerformJob{
 	
 	@Autowired
 	private JobLauncher jobLauncher;
@@ -28,11 +28,6 @@ public class ScheduledJobBean {
 				.addString("JobId", String.valueOf(System.currentTimeMillis())).toJobParameters();
 		jobLauncher.run(job, parameters);
 		
-	}
-	
-	
-	
-	
-	
+	}	
 	
 }

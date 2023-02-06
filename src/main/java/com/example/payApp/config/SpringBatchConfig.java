@@ -1,5 +1,9 @@
 package com.example.payApp.config;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -12,9 +16,12 @@ import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
 import com.example.payApp.models.Bank;
@@ -33,10 +40,14 @@ public class SpringBatchConfig {
 	@Autowired
 	private BankRepository bankRepository;
 	
+	
+	
+	
+	
 	@Bean
 	public FlatFileItemReader<Bank> reader(){
 		FlatFileItemReader<Bank> itemReader = new FlatFileItemReader<Bank>();
-		itemReader.setResource(new FileSystemResource("C:\\Users\\Aniket Kumar\\eclipse-workspace\\payApp\\src\\main\\resources\\top15banks.csv"));
+		itemReader.setResource(new ClassPathResource("top15banks.csv"));
 		itemReader.setName("csvReader");
 		itemReader.setLinesToSkip(1);
 		itemReader.setLineMapper(lineMapper());
