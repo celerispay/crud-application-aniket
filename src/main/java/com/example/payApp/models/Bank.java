@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
@@ -26,4 +27,8 @@ public class Bank {
 	
 	@Column(name = "balancesheet")
 	private String balanceSheet;
+
+	
+	
+	
 }

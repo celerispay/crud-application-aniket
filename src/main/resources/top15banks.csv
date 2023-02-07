@@ -1,16 +1,16 @@
-id,bank,country,totalassetsusb,balance_sheet
-1,Industrial & Commercial Bank of China,China,"3,615.17"
-2,China Construction Bank Corp,China,"3,149.25"
-3,Agricultural Bank of China,China,"2,950.21"
-4,Bank of China,China,"2,746.05"
-5,Mitsubishi UFJ Financial Group,Japan,"2,713.44"
-6,JPMorgan Chase & Co,USA,"2,546.29"
-7,HSBC Holdings,UK,"2,416.47"
-8,BNP Paribas,France,"2,348.65"
-9,Bank of America,USA,"2,247.70"
-10,Wells Fargo,USA,"1,951.56"
-11,Japan Post Bank,Japan,"1,874.90"
-12,Credit Agricole Group,France,"1,869.92"
-13,China Development Bank,China,"1,831.86"
-14,Citigroup Inc,USA,"1,821.64"
-15,Mizuho Financial Group,Japan,"1,793.84"
+id,bank,country,total_assets_us_b,balance_sheet
+1,Industrial & Commercial Bank of China,China,"3,615.17",3/31/2017
+2,China Construction Bank Corp,China,"3,149.25",3/31/2017
+3,Agricultural Bank of China,China,"2,950.21",3/31/2017
+4,Bank of China,China,"2,746.05",3/31/2017
+5,Mitsubishi UFJ Financial Group,Japan,"2,713.44",3/31/2017
+6,JPMorgan Chase & Co,USA,"2,546.29",3/31/2017
+7,HSBC Holdings,UK,"2,416.47",3/31/2017
+8,BNP Paribas,France,"2,348.65",3/31/2017
+9,Bank of America,USA,"2,247.70",3/31/2017
+10,Wells Fargo,USA,"1,951.56",3/31/2017
+11,Japan Post Bank,Japan,"1,874.90",3/31/2017
+12,Credit Agricole Group,France,"1,869.92",3/31/2017
+13,China Development Bank,China,"1,831.86",3/31/2017
+14,Citigroup Inc,USA,"1,821.64",3/31/2017
+15,Mizuho Financial Group,Japan,"1,793.84",3/31/2017
