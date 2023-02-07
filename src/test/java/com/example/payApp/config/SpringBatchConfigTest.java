@@ -31,7 +31,7 @@ import com.example.payApp.models.Bank;
 
 @SpringBatchTest
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles("dev")
 class SpringBatchConfigTest {
 
 	@Autowired
