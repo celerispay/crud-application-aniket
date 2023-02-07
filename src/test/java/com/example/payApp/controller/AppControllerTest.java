@@ -43,7 +43,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @MockitoSettings(strictness = Strictness.STRICT_STUBS)
 @AutoConfigureMockMvc
 @DirtiesContext
-@ActiveProfiles("test")
+@ActiveProfiles("dev")
 class AppControllerTest {
 	private ObjectMapper objectMapper;
 	

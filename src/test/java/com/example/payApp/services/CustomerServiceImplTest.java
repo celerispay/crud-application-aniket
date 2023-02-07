@@ -25,7 +25,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @SpringBootTest(classes = {PayAppApplication.class})
 @MockitoSettings(strictness = Strictness.STRICT_STUBS)
 @DirtiesContext
-@ActiveProfiles("test")
+@ActiveProfiles("dev")
 class CustomerServiceImplTest {
 	@InjectMocks
 	private CustomerServiceImpl customerServiceImpl;

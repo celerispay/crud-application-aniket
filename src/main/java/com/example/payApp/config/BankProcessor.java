@@ -4,8 +4,9 @@ import org.springframework.batch.item.ItemProcessor;
 
 import com.example.payApp.models.Bank;
 
-public class BankProcessor implements ItemProcessor<Bank, Bank>{
 
+public class BankProcessor implements ItemProcessor<Bank, Bank>{
+	
 	@Override
 	public Bank process(Bank item) throws Exception {
 		

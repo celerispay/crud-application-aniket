@@ -33,7 +33,8 @@ import com.example.payApp.models.Bank;
 @SpringBootTest
 @ActiveProfiles("dev")
 class SpringBatchConfigTest {
-
+	
+ 
 	@Autowired
 	private JobLauncherTestUtils jobLauncherTestUtils;
 	
