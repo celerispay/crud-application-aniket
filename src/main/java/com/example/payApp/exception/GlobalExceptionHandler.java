@@ -11,7 +11,14 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 @ResponseStatus
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler{
-		@ExceptionHandler(CustomerNotFoundException.class)
+		
+	/**
+	 * Customer exception handler
+	 * @param ex Exception
+	 * @param request Request
+	 * @return @ResponseEntity<ErrorMessage>
+	 */
+	@ExceptionHandler(CustomerNotFoundException.class)
 		public ResponseEntity<ErrorMessage> handleCustomerNotFoundException(CustomerNotFoundException ex, WebRequest request){
 			ErrorMessage errorMessage = new ErrorMessage(HttpStatus.NOT_FOUND,ex.getMessage());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMessage);
