@@ -1,9 +1,5 @@
 package com.example.payApp.config;
 
-
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,14 +24,11 @@ import org.springframework.test.context.ActiveProfiles;
 
 import com.example.payApp.models.Bank;
 
-
 @SpringBatchTest
 @SpringBootTest
 @ActiveProfiles("dev")
 class SpringBatchConfigTest {
 	
-	
- 
 	@Autowired
 	private JobLauncherTestUtils jobLauncherTestUtils;
 	
@@ -59,7 +52,6 @@ class SpringBatchConfigTest {
 		Assertions.assertEquals(ExitStatus.COMPLETED, jobExecution.getExitStatus());
 	}
 	
-	
 	@DisplayName("This checking Item reader is working")
 	@Test
 	public void readerTest() throws Exception {
@@ -79,7 +71,6 @@ class SpringBatchConfigTest {
             return result;
         });
 		
-		
 		int expectedSize = 15;
 		Bank expected0Indexbank = new Bank(1, "Industrial & Commercial Bank of China", "China", "3,615.17", "3/31/2017");
 		Assertions.assertEquals(expectedSize, items.size());
@@ -88,7 +79,4 @@ class SpringBatchConfigTest {
 	}
 	
 	
-	
-	
-
 }

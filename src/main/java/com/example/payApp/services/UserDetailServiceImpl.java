@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.example.payApp.models.User;
-import com.example.payApp.repositories.UserRepository;
+import com.example.payApp.repository.UserRepository;
 
 @Service
 public class UserDetailServiceImpl implements UserDetailsService{
@@ -21,10 +21,9 @@ public class UserDetailServiceImpl implements UserDetailsService{
 		 if (user == null) {
 	            throw new UsernameNotFoundException(username);
 	        }
-	        UserDetails newuser = org.springframework.security.core.userdetails.User.withUsername(user.getUname())
+	        return org.springframework.security.core.userdetails.User.withUsername(user.getUname())
 	                            .password(user.getPassword())
-	                            .authorities("USER").build();
-	        return newuser;
+	                            .authorities("USER").build(); 
 	}
 
 }

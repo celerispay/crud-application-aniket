@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.payApp.exception.CustomerNotFoundException;
 import com.example.payApp.models.Customer;
-import com.example.payApp.repositories.CustomerRepository;
+import com.example.payApp.repository.CustomerRepository;
 
 @Service
 public class CustomerRepoServiceImpl implements CustomerRepoService {
@@ -18,14 +18,13 @@ public class CustomerRepoServiceImpl implements CustomerRepoService {
 
 	@Override
 	public Customer save(Customer customer) {
-		Customer newCustomer = customerRepository.save(customer);
-		return newCustomer;
+		return customerRepository.save(customer);
+		
 	}
 
 	@Override
 	public List<Customer> findAll() {
-		List<Customer> listCustomers = customerRepository.findAll();
-		return listCustomers;
+		return customerRepository.findAll();
 	}
 
 	@Override
@@ -50,8 +49,7 @@ public class CustomerRepoServiceImpl implements CustomerRepoService {
 		cu.setCustomerEmail(customer.getCustomerEmail());
 		cu.setCustomerCurrentBalance(customer.getCustomerCurrentBalance());
 		cu.setCustomerPaymentMethod(customer.getCustomerPaymentMethod());
-		final Customer upaCustomer = customerRepository.save(cu);
-		return upaCustomer;
+		return customerRepository.save(cu);
 	}
 
 	@Override
@@ -60,15 +58,5 @@ public class CustomerRepoServiceImpl implements CustomerRepoService {
 		customerRepository.deleteById(id);
 
 	}
-
-	
-
-	
-
-	
-
-	
-
-	
 
 }

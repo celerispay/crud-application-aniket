@@ -27,6 +27,5 @@ public class UserServiceImpl implements UserService{
 	public String getUserRoles(String username) {
 		return userRepoService.findRoleByName(username);
 	}
-
 	
 }

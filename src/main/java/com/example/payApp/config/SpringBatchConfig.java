@@ -19,7 +19,7 @@ import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
 
 import com.example.payApp.models.Bank;
-import com.example.payApp.repositories.BankRepository;
+import com.example.payApp.repository.BankRepository;
 
 @Configuration
 @EnableBatchProcessing
@@ -101,11 +101,5 @@ public class SpringBatchConfig {
 		asyncTaskExecutor.setConcurrencyLimit(10);
 		return asyncTaskExecutor;
 	}
-	
-	
-	
-	
-	
-	
 	
 }

@@ -1,7 +1,6 @@
 package com.example.payApp.controller;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -63,13 +62,12 @@ class AppControllerTest {
 		System.out.println(jsonString);
 	
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonString)).andReturn();
-		
-		
-		
+
 		int status = mvcResult.getResponse().getStatus();
-		assertEquals(201, status);
+		Assertions.assertEquals(201, status);
 		
 	}
+	
 	@DisplayName("This is for finding customer with get method")
 	@Test
 	void testFindingCustomerWithId() throws Exception{
@@ -80,7 +78,7 @@ class AppControllerTest {
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)
 			      .accept(MediaType.APPLICATION_JSON_VALUE)).andReturn();
 		int status = mvcResult.getResponse().getStatus();
-		assertEquals(200, status);
+		Assertions.assertEquals(200, status);
 	}
 	
 	@DisplayName("This is for updating customer with put method")
@@ -91,7 +89,7 @@ class AppControllerTest {
 		String jsonString = objectMapper.writeValueAsString(customer);
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.put(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(jsonString)).andReturn();
 		int status  = mvcResult.getResponse().getStatus();
-		assertEquals(200, status);
+		Assertions.assertEquals(200, status);
 		
 	}
 	
@@ -101,7 +99,7 @@ class AppControllerTest {
 		String uri = "/customer/2";
 	      MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.delete(uri)).andReturn();
 	      int status = mvcResult.getResponse().getStatus();
-	      assertEquals(200, status);
+	      Assertions.assertEquals(200, status);
 	}
 
 }

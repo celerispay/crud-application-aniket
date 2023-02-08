@@ -1,10 +1,10 @@
 package com.example.payApp.services;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -46,7 +46,7 @@ class CustomerServiceImplTest {
 		when(customerRepoServiceMock.save(any(Customer.class))).thenReturn(expectedCustomer);
 		Customer customer = new Customer("Aniket Kumar","9090909090","aniket@gmail.com", 10000, "Upi");
 		Long actualCustomerId = customerServiceImpl.addCustomers(customer);
-		assertEquals(actualCustomerId, expectedCustomer.getCustomerId());
+		Assertions.assertEquals(actualCustomerId, expectedCustomer.getCustomerId());
 		
 	}
 
@@ -56,7 +56,7 @@ class CustomerServiceImplTest {
 		Customer expectedCustomer = new Customer((long)1,"Aniket Kumar","9090909090","aniket@gmail.com", 10000, "Upi");
 		when(customerRepoServiceMock.findById(anyLong())).thenReturn(expectedCustomer);
 		Customer actualCustomer = customerServiceImpl.findCustomerById((long)1);
-		assertEquals(actualCustomer, expectedCustomer);
+		Assertions.assertEquals(actualCustomer, expectedCustomer);
 	}
 	
 	@DisplayName("This will Update the customer")
@@ -66,7 +66,7 @@ class CustomerServiceImplTest {
 		when(customerRepoServiceMock.updateById(any(Customer.class), anyLong())).thenReturn(expectedCustomer);
 		Customer customer = new Customer("Aniket Kumar","9090909090","aniket@gmail.com", 10000, "Upi");
 		Customer actualCustomer = customerServiceImpl.updateCustomerById(customer,(long) 1);
-		assertEquals(actualCustomer, expectedCustomer);
+		Assertions.assertEquals(actualCustomer, expectedCustomer);
 	}
 
 

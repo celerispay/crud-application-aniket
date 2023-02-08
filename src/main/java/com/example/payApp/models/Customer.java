@@ -52,8 +52,6 @@ public class Customer {
 	@PrimaryKeyJoinColumn
 	private Upi upi;
 
-
-
 	public Customer(Long customerId, @Max(150) @NotNull(message = "Name should not empty") String customerName,
 			@NotNull(message = "phone number cannot be null") @Max(10) String customerPhoneNumber,
 			@Email(message = "Please enter correct email") @NotNull String customerEmail,

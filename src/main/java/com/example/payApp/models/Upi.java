@@ -27,8 +27,6 @@ public class Upi {
 	@Column(name = "upiid")
 	private String upiId;
 	
-	
-
 	@OneToOne
     @MapsId
     @JoinColumn(name = "customerId")

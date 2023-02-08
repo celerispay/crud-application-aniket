@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import com.example.payApp.exception.CustomerNotFoundException;
 import com.example.payApp.models.Customer;
 import com.example.payApp.models.Upi;
-import com.example.payApp.repositories.CustomerRepository;
-import com.example.payApp.repositories.UpiRepository;
+import com.example.payApp.repository.CustomerRepository;
+import com.example.payApp.repository.UpiRepository;
 
 @Service
 public class UpiRepoServiceImpl implements UpiRepoService{
@@ -26,9 +26,9 @@ public class UpiRepoServiceImpl implements UpiRepoService{
 		if(!optionalCOptional.isPresent()) {
 			throw new CustomerNotFoundException("Please enter correct customerId, This Id "+ id + " is not present");
 		}
-		Customer customer = optionalCOptional.get();
-		Upi newUpi = new Upi(upi.getUpiId(),customer);
-		return upiRepository.save(newUpi);
+		upi.setUpiId(upi.getUpiId());
+		upi.setCustomer(optionalCOptional.get());
+		return upiRepository.save(upi);
 	}
 
 }

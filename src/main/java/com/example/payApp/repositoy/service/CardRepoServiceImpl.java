@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import com.example.payApp.exception.CustomerNotFoundException;
 import com.example.payApp.models.Card;
 import com.example.payApp.models.Customer;
-import com.example.payApp.repositories.CardRepository;
-import com.example.payApp.repositories.CustomerRepository;
+import com.example.payApp.repository.CardRepository;
+import com.example.payApp.repository.CustomerRepository;
 
 @Service
 public class CardRepoServiceImpl implements CardRepoService{
@@ -26,13 +26,12 @@ public class CardRepoServiceImpl implements CardRepoService{
 		if(!optionalCusOptional.isPresent()) {
 			throw new CustomerNotFoundException("Please enter correct customerId, This Id "+ id + " is not present");
 		}
-		Customer customer = optionalCusOptional.get();
-		Card newCard = new Card(card.getNumber(),card.getExpMonth(),card.getExpYear(),card.getCvv(),customer);
-		return cardRepository.save(newCard);
+		card.setNumber(card.getNumber());
+		card.setExpMonth(card.getExpMonth());
+		card.setExpYear(card.getExpYear());
+		card.setCvv(card.getCvv());
+		card.setCustomer(optionalCusOptional.get());
+		return cardRepository.save(card);
 	}
-
-	
-
-	
 
 }

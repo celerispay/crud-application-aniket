@@ -31,7 +31,4 @@ public class Bank {
 	@Column(name = "balancesheet")
 	private String balanceSheet;
 
-	
-	
-	
 }

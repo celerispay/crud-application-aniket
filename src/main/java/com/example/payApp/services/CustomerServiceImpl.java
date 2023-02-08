@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 import com.example.payApp.models.Customer;
 import com.example.payApp.repositoy.service.CustomerRepoService;
 
-
-
 @Primary
 @Service
 public class CustomerServiceImpl implements CustomerService{
@@ -22,7 +20,6 @@ public class CustomerServiceImpl implements CustomerService{
 		return newCustomer.getCustomerId();
 
 	}
-
 
 	@Override
 	public Customer findCustomerById(Long id){

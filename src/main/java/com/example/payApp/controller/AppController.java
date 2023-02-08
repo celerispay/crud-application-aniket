@@ -37,10 +37,6 @@ public class AppController {
 	
 	//For fetching the swagger Documentation http://localhost:8080/swagger-ui.html
 	
-	
-	
-	
-	
 	@PostMapping("/customer")
 	public ResponseEntity<Long>addingCustomer(@Valid @RequestBody Customer customer){
 		log.info("add customer called with {}", customer);

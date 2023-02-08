@@ -10,7 +10,6 @@ public class ErrorMessage {
 		
 	}
 	
-	
 	public ErrorMessage(HttpStatus httpStatus, String messageString) {
 		super();
 		this.httpStatus = httpStatus;
