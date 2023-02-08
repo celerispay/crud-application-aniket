@@ -1,4 +1,4 @@
-package com.example.payApp.repositoyService;
+package com.example.payApp.repositoy.service;
 
 import java.util.Optional;
 
@@ -13,10 +13,10 @@ import com.example.payApp.repositories.UpiRepository;
 
 @Service
 public class UpiRepoServiceImpl implements UpiRepoService{
-	
+
 	@Autowired
 	private UpiRepository upiRepository;
-	
+
 	@Autowired
 	private CustomerRepository customerRepository;
 

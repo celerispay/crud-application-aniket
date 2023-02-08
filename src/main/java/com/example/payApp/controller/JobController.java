@@ -16,24 +16,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/jobs")
 public class JobController {
-	
+
 	@Autowired
 	private JobLauncher jobLauncher;
-	
+
 	@Autowired
 	private Job job;
-	
+
 	@PostMapping("/importBanks")
 	public void importCsvToDB() {
-		 JobParameters jobParameters = new JobParametersBuilder()
-	                .addLong("startAt", System.currentTimeMillis()).toJobParameters();
-		 
-		 try {
+		JobParameters jobParameters = new JobParametersBuilder()
+				.addLong("startAt", System.currentTimeMillis()).toJobParameters();
+
+		try {
 			jobLauncher.run(job, jobParameters);
-			
+
 		} catch (JobExecutionAlreadyRunningException | JobRestartException | JobInstanceAlreadyCompleteException
 				| JobParametersInvalidException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.payApp.models.Upi;
-import com.example.payApp.repositoyService.UpiRepoService;
+import com.example.payApp.repositoy.service.UpiRepoService;
 
 @Service
 public class UpiServiceImpl implements UpiService {

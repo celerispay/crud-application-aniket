@@ -2,8 +2,6 @@ package com.example.payApp.controller;
 
 import javax.validation.Valid;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,10 +21,11 @@ import com.example.payApp.services.UpiService;
 
 import lombok.extern.log4j.Log4j2;
 
-@Log4j2
+
 @RestController
+@Log4j2
 public class AppController {
-	private static Logger log = LogManager.getLogger(AppController.class);	
+	
 	@Autowired
 	private CustomerService customerService;
 	

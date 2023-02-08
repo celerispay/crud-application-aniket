@@ -1,4 +1,4 @@
-package com.example.payApp.repositoyService;
+package com.example.payApp.repositoy.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,7 +12,7 @@ import com.example.payApp.repositories.CustomerRepository;
 
 @Service
 public class CustomerRepoServiceImpl implements CustomerRepoService {
-	
+
 	@Autowired
 	private CustomerRepository customerRepository;
 
@@ -36,10 +36,10 @@ public class CustomerRepoServiceImpl implements CustomerRepoService {
 		}
 		return optionalCusOptional.get();
 	}
-	
+
 	@Override
 	public Customer updateById(Customer customer, Long id)throws CustomerNotFoundException{
-		
+
 		Optional<Customer> optionalCusOptional = customerRepository.findById(id);
 		if(!optionalCusOptional.isPresent()) {
 			throw new CustomerNotFoundException("Please enter correct customerId, This Id "+ id + " is not present");
@@ -56,9 +56,9 @@ public class CustomerRepoServiceImpl implements CustomerRepoService {
 
 	@Override
 	public void deleteById(Long id)throws CustomerNotFoundException {
-		
+
 		customerRepository.deleteById(id);
-		
+
 	}
 
 	

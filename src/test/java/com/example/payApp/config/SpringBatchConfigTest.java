@@ -34,6 +34,7 @@ import com.example.payApp.models.Bank;
 @ActiveProfiles("dev")
 class SpringBatchConfigTest {
 	
+	
  
 	@Autowired
 	private JobLauncherTestUtils jobLauncherTestUtils;
@@ -80,7 +81,9 @@ class SpringBatchConfigTest {
 		
 		
 		int expectedSize = 15;
+		Bank expected0Indexbank = new Bank(1, "Industrial & Commercial Bank of China", "China", "3,615.17", "3/31/2017");
 		Assertions.assertEquals(expectedSize, items.size());
+		Assertions.assertEquals(expected0Indexbank, items.get(0));
 		
 	}
 	

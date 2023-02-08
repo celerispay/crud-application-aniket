@@ -18,7 +18,7 @@ public class ThymeleafController {
 	@Autowired
 	private CustomerService customerService;
 	
-	@GetMapping("/")
+	@GetMapping("/welcome")
 	public String index(Model model) {
 		return "index";
 	}
@@ -33,7 +33,7 @@ public class ThymeleafController {
 	@PostMapping("/addCustomer")
 	public String addingCustomer(@Valid @ModelAttribute  Customer customer, Model model){
 		model.addAttribute("customer",customer);
-		Long idLong = customerService.addCustomers(customer);
+		customerService.addCustomers(customer);
 		return "display_form";
 	}
 }

@@ -11,7 +11,7 @@ import io.swagger.v3.oas.models.info.License;
 
 @Configuration
 public class OpenApiConfig {
-	
+
 	@Bean
 	public OpenAPI customeOpenAPI() {
 		return new OpenAPI()
@@ -22,7 +22,7 @@ public class OpenApiConfig {
 						.contact(new Contact().email("aniketkumar@celerispay.com"))
 						.license(new License().name("WLP"))
 						.version("1.0")
-				);
+						);
 	}
 
 }

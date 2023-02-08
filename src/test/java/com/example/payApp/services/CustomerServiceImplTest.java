@@ -19,7 +19,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import com.example.payApp.PayAppApplication;
 import com.example.payApp.models.Customer;
-import com.example.payApp.repositoyService.CustomerRepoService;
+import com.example.payApp.repositoy.service.CustomerRepoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest(classes = {PayAppApplication.class})
@@ -33,12 +33,10 @@ class CustomerServiceImplTest {
 	@MockBean
 	private CustomerRepoService customerRepoServiceMock;
 	
-	private ObjectMapper objectMapper;
-	
 	@BeforeEach
 	void setUp() {
 		MockitoAnnotations.openMocks(this);
-		objectMapper = new ObjectMapper();
+		new ObjectMapper();
 	}
 	@DisplayName("This will  addCustomer")
 	@Test

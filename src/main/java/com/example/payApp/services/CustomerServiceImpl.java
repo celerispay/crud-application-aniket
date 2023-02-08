@@ -5,52 +5,38 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.example.payApp.models.Customer;
-import com.example.payApp.repositoyService.CustomerRepoService;
+import com.example.payApp.repositoy.service.CustomerRepoService;
 
 
 
 @Primary
 @Service
 public class CustomerServiceImpl implements CustomerService{
-	
+
 	@Autowired
 	private CustomerRepoService customerRepoService;
-	
+
 	@Override
 	public Long addCustomers(Customer customer) {
-		
-		Customer newCustomer = new Customer(customer.getCustomerId(), customer.getCustomerName(),customer.getCustomerPhoneNumber(),customer.getCustomerEmail(),customer.getCustomerCurrentBalance(),customer.getCustomerPaymentMethod());
-		Customer genCustomer = customerRepoService.save(newCustomer);
-		return genCustomer.getCustomerId();
-		
+		Customer newCustomer = customerRepoService.save(customer);
+		return newCustomer.getCustomerId();
+
 	}
-	
+
 
 	@Override
 	public Customer findCustomerById(Long id){
-		
-			Customer customer = customerRepoService.findById(id);
-		return customer;
+		return customerRepoService.findById(id);
 	}
-	
+
 	@Override
 	public Customer updateCustomerById(Customer customer, Long Id){
-		
-		Customer  customer2 = customerRepoService.updateById(customer, Id);
-		return customer2;
+		return customerRepoService.updateById(customer, Id); 
 	}
 
 	@Override
 	public void deleteCustomerById(Long id){
-		
-		
-			customerRepoService.deleteById(id);
-		
+		customerRepoService.deleteById(id);
 	}
-
-
-	
-
-	
 
 }

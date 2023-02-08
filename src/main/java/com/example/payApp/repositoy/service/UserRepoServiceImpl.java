@@ -1,4 +1,4 @@
-package com.example.payApp.repositoyService;
+package com.example.payApp.repositoy.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

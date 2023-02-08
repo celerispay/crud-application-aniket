@@ -5,10 +5,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
@@ -16,7 +13,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
-
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -48,15 +44,15 @@ public class Customer {
 	@NotNull
 	@Column(name = "paymentmethod")
 	private String customerPaymentMethod;
-	
+
 	@OneToMany(cascade = CascadeType.ALL)
 	private Set<Card> cardset;
-	
+
 	@OneToOne(mappedBy = "customer", cascade = CascadeType.ALL)
 	@PrimaryKeyJoinColumn
 	private Upi upi;
-	
-	
+
+
 
 	public Customer(Long customerId, @Max(150) @NotNull(message = "Name should not empty") String customerName,
 			@NotNull(message = "phone number cannot be null") @Max(10) String customerPhoneNumber,
@@ -82,9 +78,5 @@ public class Customer {
 		this.customerCurrentBalance = customerCurrentBalance;
 		this.customerPaymentMethod = customerPaymentMethod;
 	}
-	
-	
 
-	
-	
 }

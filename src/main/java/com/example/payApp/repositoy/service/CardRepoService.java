@@ -1,4 +1,4 @@
-package com.example.payApp.repositoyService;
+package com.example.payApp.repositoy.service;
 
 import com.example.payApp.models.Card;
 
