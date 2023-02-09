@@ -36,7 +36,7 @@ public class Card {
 	 private String cvv;
 	
 	@ManyToOne
-	@JoinColumn(name = "customerId")
+	@JoinColumn(name = "customer_Id")
 	private Customer customer;
 
 	public Card( @NotNull String number, @NotNull String expMonth, @NotNull String expYear,

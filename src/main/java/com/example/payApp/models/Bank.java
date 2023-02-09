@@ -25,7 +25,7 @@ public class Bank {
 	@Column(name = "country")
 	private String country;
 	
-	@Column(name = "totalassetsusb")
+	@Column(name = "total_assetsusb")
 	private String totalAssetsusb;
 	
 	@Column(name = "balancesheet")

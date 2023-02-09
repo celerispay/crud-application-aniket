@@ -26,12 +26,14 @@ import com.example.payApp.services.CustomerService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
+
 @SpringBootTest(classes = {PayAppApplication.class})
 @MockitoSettings(strictness = Strictness.STRICT_STUBS)
 @AutoConfigureMockMvc
 @DirtiesContext
 @ActiveProfiles("dev")
 class AppControllerTest {
+	@Autowired
 	private ObjectMapper objectMapper;
 	
 	private MockMvc mvc;

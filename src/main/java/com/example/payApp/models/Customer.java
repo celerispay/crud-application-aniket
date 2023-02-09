@@ -25,24 +25,24 @@ import lombok.NoArgsConstructor;
 @Table(name = "customers")
 public class Customer {
 	@Id
-	@Column(name = "cutomerId")
+	@Column(name = "customer_Id")
 	private Long customerId;
 	@Max(150)
 	@NotNull(message = "Name should not empty")
-	@Column(name = "customername")
+	@Column(name = "customer_name")
 	private String customerName;
 	@NotNull(message = "phone number cannot be null")
 	@Max(10)
-	@Column(name = "customernumber")
+	@Column(name = "customer_number")
 	private String customerPhoneNumber;
 	@Email(message = "Please enter correct email")
 	@NotNull
-	@Column(name = "customeremail")
+	@Column(name = "customer_email")
 	private String customerEmail;
 	@Column(name = "balance")
 	private Integer customerCurrentBalance;
 	@NotNull
-	@Column(name = "paymentmethod")
+	@Column(name = "payment_method")
 	private String customerPaymentMethod;
 
 	@OneToMany(cascade = CascadeType.ALL)

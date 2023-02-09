@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.payApp.models.Card;
-import com.example.payApp.repositoy.service.CardRepoService;
+import com.example.payApp.repository.service.CardRepoService;
 
 @Service
 public class CardServiceImpl implements CardService{

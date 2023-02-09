@@ -24,12 +24,12 @@ public class Upi {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "upiid")
+	@Column(name = "upi_id")
 	private String upiId;
 	
 	@OneToOne
     @MapsId
-    @JoinColumn(name = "customerId")
+    @JoinColumn(name = "customer_Id")
 	private Customer customer;
 	
 	public Upi(String upiId, Customer customer) {

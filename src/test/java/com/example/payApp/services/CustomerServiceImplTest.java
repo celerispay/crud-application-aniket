@@ -19,7 +19,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import com.example.payApp.PayAppApplication;
 import com.example.payApp.models.Customer;
-import com.example.payApp.repositoy.service.CustomerRepoService;
+import com.example.payApp.repository.service.CustomerRepoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest(classes = {PayAppApplication.class})

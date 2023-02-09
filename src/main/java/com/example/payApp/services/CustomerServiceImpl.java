@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.example.payApp.models.Customer;
-import com.example.payApp.repositoy.service.CustomerRepoService;
+import com.example.payApp.repository.service.CustomerRepoService;
 
 @Primary
 @Service

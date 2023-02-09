@@ -24,16 +24,9 @@ public class JobController {
 	private Job job;
 
 	@PostMapping("/importBanks")
-	public void importCsvToDB() {
+	public void importCsvToDB() throws Exception{
 		JobParameters jobParameters = new JobParametersBuilder()
 				.addLong("startAt", System.currentTimeMillis()).toJobParameters();
-
-		try {
 			jobLauncher.run(job, jobParameters);
-
-		} catch (JobExecutionAlreadyRunningException | JobRestartException | JobInstanceAlreadyCompleteException
-				| JobParametersInvalidException e) {
-			e.printStackTrace();
-		}
 	}
 }
