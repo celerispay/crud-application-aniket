@@ -10,7 +10,6 @@ import lombok.extern.log4j.Log4j2;
 @EnableScheduling
 @Log4j2
 public class PayAppApplication {
-	
 	public static void main(String[] args) {
 		SpringApplication.run(PayAppApplication.class, args);
 		

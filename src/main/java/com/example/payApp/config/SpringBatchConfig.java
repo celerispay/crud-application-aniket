@@ -77,10 +77,13 @@ public class SpringBatchConfig {
 	
 	@Bean
 	public Step step1() {
-		return stepBuilderFactory.get("csv-step").<Bank,Bank>chunk(10)
+		return stepBuilderFactory.get("csv-step").<Bank,Bank>chunk(1)
 				.reader(reader())
 				.processor(processor())
 				.writer(writer())
+				.faultTolerant()
+				.skipLimit(1)
+				.skip(Exception.class)
 				.taskExecutor(taskExecutor())
 				.build();
 	}

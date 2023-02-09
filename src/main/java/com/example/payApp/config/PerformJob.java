@@ -17,7 +17,7 @@ public class PerformJob{
 	@Autowired
 	private Job job;
 	
-	@Scheduled(cron = "0 */1 * * * ?")
+	//@Scheduled(cron = "0 */1 * * * ?")
 	public void perform() throws Exception {
 		JobParameters parameters = new JobParametersBuilder()
 				.addString("JobId", String.valueOf(System.currentTimeMillis())).toJobParameters();
