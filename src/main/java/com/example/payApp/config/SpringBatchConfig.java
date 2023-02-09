@@ -33,11 +33,7 @@ public class SpringBatchConfig {
 	
 	@Autowired
 	private BankRepository bankRepository;
-	
-	
-	
-	
-	
+
 	@Bean
 	public FlatFileItemReader<Bank> reader(){
 		FlatFileItemReader<Bank> itemReader = new FlatFileItemReader<Bank>();
