@@ -32,7 +32,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.batch:spring-batch-core:4.3.3'
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
-	implementation 'javax.validation:validation-api:2.0.0.Final'
 	implementation 'org.flywaydb:flyway-core:8.5.13'
 	implementation 'org.flywaydb:flyway-mysql:8.4.4'
 	implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
