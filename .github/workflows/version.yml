@@ -4,10 +4,10 @@ on:
     types:
       - closed
     branches:
-      - master
+      - release/stag
   push:
     branches:
-      - test
+      - release/stag
       
 jobs:
   version:
